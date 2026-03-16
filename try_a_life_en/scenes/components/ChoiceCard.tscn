@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://chcxfulesj0y3"]
+
+[ext_resource type="Script" uid="uid://iyof48rlneyo" path="res://scenes/components/ChoiceCard.gd" id="1_67dvd"]
+
+[node name="ChoiceCard" type="Button"]
+custom_minimum_size = Vector2(0, 80)
+pivot_offset = Vector2(250, 40)
+theme_override_font_sizes/font_size = 18
+script = ExtResource("1_67dvd")

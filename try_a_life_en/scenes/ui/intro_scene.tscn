@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbbet6ftq0c0s"]
+
+[ext_resource type="Script" uid="uid://g3q3wfv7thgd" path="res://scenes/ui/Intro_Scene.gd" id="1_h77ab"]
+[ext_resource type="VideoStream" uid="uid://df3x0hcfqf1yb" path="res://assets/video/intro.ogv" id="2_h77ab"]
+
+[node name="IntroScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h77ab")
+
+[node name="IntroPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_h77ab")
+expand = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.230315, 0.230315, 0.230315, 1)
+text = "[ Press any key to skip ]"

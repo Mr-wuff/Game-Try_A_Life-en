@@ -1,0 +1,31 @@
+[gd_scene load_steps=12 format=3 uid="uid://cr67b8u685h2e"]
+
+[ext_resource type="Script" uid="uid://cs3507aim7ntd" path="res://scenes/main/main.gd" id="1_hyk8p"]
+[ext_resource type="AudioStream" uid="uid://bjsx58ag86u7p" path="res://assets/audio/萧之然（张皓） - Call Of Silence(Feat_violin) (翻奏_ SvoTian-X).ogg" id="2_k2fmo"]
+[ext_resource type="AudioStream" uid="uid://dgndej18c4msx" path="res://assets/audio/热田公纪 - Childhood-Memory.ogg" id="3_hujxm"]
+[ext_resource type="AudioStream" uid="uid://dnino8hu7f8t7" path="res://assets/audio/Jackie Evancho _ T Bone Burnett _ Taylor Swift _ John Paul White _ Joy Williams - Safe and Sound.ogg" id="3_l3cfh"]
+[ext_resource type="AudioStream" uid="uid://jlkkx01k1as5" path="res://assets/audio/Kyle Xian - 你的名字.ogg" id="4_yyfjg"]
+[ext_resource type="AudioStream" uid="uid://ceiurduj8hpd8" path="res://assets/audio/凇仔 - 花瓣飘来的方向.ogg" id="5_b1x3f"]
+[ext_resource type="AudioStream" uid="uid://dgtq50wjillyy" path="res://assets/audio/双笙 (陈元汐) - 心做し (心理作用).ogg" id="6_a8run"]
+[ext_resource type="AudioStream" uid="uid://doxudluck6qqq" path="res://assets/audio/chips-stack-1.ogg" id="8_ouso4"]
+[ext_resource type="AudioStream" uid="uid://btm8bf2pt5roh" path="res://assets/audio/dice-shake-2.ogg" id="9_blune"]
+[ext_resource type="AudioStream" uid="uid://eo1vdss4f7xg" path="res://assets/audio/dice-throw-1.ogg" id="10_th5th"]
+[ext_resource type="AudioStream" uid="uid://bx1js0s0toikj" path="res://assets/audio/die-throw-1.ogg" id="11_7smn1"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_hyk8p")
+bgm_menu = ExtResource("2_k2fmo")
+bgm_stages = Array[AudioStream]([ExtResource("3_hujxm"), ExtResource("4_yyfjg"), ExtResource("5_b1x3f"), ExtResource("6_a8run")])
+bgm_epic = ExtResource("3_l3cfh")
+sfx_click = ExtResource("8_ouso4")
+sfx_dice = ExtResource("9_blune")
+sfx_roll_success = ExtResource("10_th5th")
+sfx_roll_fail = ExtResource("11_7smn1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="OverlayLayer" type="CanvasLayer" parent="."]
+layer = 10
