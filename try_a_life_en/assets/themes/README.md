@@ -1,1 +1,1 @@
-# Put the CG here.
+# Put the Theme File here.
