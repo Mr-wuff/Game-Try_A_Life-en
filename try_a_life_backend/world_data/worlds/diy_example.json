@@ -1,0 +1,131 @@
+{
+  "___MODDING_GUIDELINES___": {
+    "1_FILE_PLACEMENT": "Save this file in 'backend/world_data/worlds/'. The filename (e.g., 'wasteland.json') becomes your internal world_key.",
+    "2_CG_VIDEOS": "To use custom videos, place them in the 'mods/<world_key>/cgs/' folder. The engine ONLY supports .webm formats. Do not use MP4.",
+    "3_CG_TRIGGERS": "Use the 'cg_triggers' array to sniff keywords from the AI's output. If the AI generates 'Deathclaw', the engine will play the assigned video.",
+    "4_ATTRIBUTES": "You can rename the 7 core stats. Do not add new ones or remove existing ones. Map them in 'display_names'.",
+    "5_BALANCING": "Keep 'max_reward' around 5 and 'hp_max_penalty' around -15 to prevent the game from being too easy or impossible."
+  },
+
+  "info": {
+    "name": "Post-Apocalyptic Wasteland",
+    "display_name": "Radioactive Wasteland",
+    "flavor": "War. War never changes.",
+    "description": "After the Great War, the surface became a scorched hellscape. Clean water is rarer than gold. Mutated creatures roam the ruins.",
+    "rules": "Bottle caps are currency. Venturing outside requires a gas mask. Radiation constantly erodes the body.",
+    "common_events": ["Scavenging supplies", "Raider ambush", "Discovering a vault", "Mutant attack", "Water crisis"],
+    "special_notes": "All events must fit a post-apocalyptic setting. Strictly NO magic, cultivation, or elves."
+  },
+
+  "cg_triggers": [
+    {
+      "_comment": "When the AI mentions 'Deathclaw', play these videos depending on if the player succeeds the dice roll.",
+      "keywords": ["Deathclaw", "Alpha predator", "Mutated lizard"],
+      "type": "any",
+      "success_video": "deathclaw_slain.webm",
+      "fail_video": "deathclaw_death.webm"
+    },
+    {
+      "_comment": "Plays only during Boss/Node battles if the word 'Overseer' or 'Vault Door' appears.",
+      "keywords": ["Overseer", "Vault Door", "Betrayal"],
+      "type": "node",
+      "success_video": "escape_the_vault.webm",
+      "fail_video": "trapped_forever.webm"
+    }
+  ],
+
+  "attributes": {
+    "display_names": {
+      "constitution": "Strength",
+      "intelligence": "Perception",
+      "charisma": "Charisma",
+      "wealth": "Caps",
+      "luck": "Luck",
+      "social": "Speech",
+      "willpower": "Rad Resistance"
+    },
+    "descriptions": {
+      "Strength": "Melee damage, carry weight, physical tasks",
+      "Perception": "Ranged accuracy, trap detection, environmental awareness",
+      "Charisma": "NPC disposition, trade prices, leadership",
+      "Caps": "Wasteland currency for trading and hiring",
+      "Luck": "Critical hit chance, rare loot probability",
+      "Speech": "Persuasion, deception, intimidation success rate",
+      "Rad Resistance": "Ability to survive high-radiation zones"
+    }
+  },
+
+  "character": {
+    "start_age": 10,
+    "max_age": 70,
+    "initial_hp": 100,
+    "birth_description": "The vault's steel door slams shut behind you. Outside, the world is silent and dead...",
+    "backstory": "Third-generation vault dweller. Raised underground, never seen the sky."
+  },
+
+  "npcs": [
+    {
+      "name": "Doc Mercy",
+      "personality": "Wasteland physician. Cynical but compassionate. Charges caps but treats the desperate for free.",
+      "role": "Settlement Doctor",
+      "appear_condition": "age >= 12",
+      "affinity_start": 5
+    }
+  ],
+
+  "relationships": {
+    "family": "Your parents were vault technicians who died in a reactor accident.",
+    "initial_bonds": ["Vault Overseer"]
+  },
+
+  "reward_limits": {
+    "max_reward": 5,
+    "max_penalty": -8,
+    "hp_max_penalty": -15
+  },
+
+  "node_ages": [16, 20, 30],
+  "node_templates": {
+    "16": "The Overseer hands you a rusty pistol. 'The water purifier is dying. Find the replacement chip — or we all die down here.'",
+    "20": "Surrounded by a mutant warband. Firelight dances on their grotesque faces. Your weapon is low on ammo. Choose now, or die.",
+    "30": "A pre-war military bunker, supposedly containing technology that could change the wasteland forever. Inside could be salvation — or a trap."
+  },
+
+  "forbidden_patterns": [
+    "magic", "cultivation", "emperor", "elf", "spiritual energy",
+    "sect", "martial arts", "medieval"
+  ],
+
+  "world_specific_rules": "[Wasteland Rules] Combat -> Strength/Perception. Trading -> Speech. High-rad zones -> Rad Resistance. [Penalty Style] Failure means radiation poisoning (-Rad Resistance) or injury (-HP).",
+
+  "age_constraints": {
+    "0-15": "[Vault Youth] Confined to the vault interior. Protected by adults. Cannot handle weapons.",
+    "16-30": "[Wasteland Rookie] Just emerged onto the surface. Everything is a threat.",
+    "31-50": "[Wasteland Veteran] Years of experience. Own territory, allies, and enemies."
+  },
+
+  "age_themes": {
+    "0-15": [
+      "Sneaking into the reactor room through a vent — the Geiger counter starts screaming.",
+      "First time holding a real gun. Your hands won't stop shaking."
+    ],
+    "16-30": [
+      "A Deathclaw chases you through three city blocks. You dive into a wrecked school bus and pray.",
+      "You find a suit of pre-war power armor in a military depot. No fusion core, though."
+    ],
+    "31-50": [
+      "Raiders hit your outpost at night. The sentry never got a chance to sound the alarm."
+    ]
+  },
+
+  "loading_texts": {
+    "transition_titles": [
+      "Another day in the wasteland...",
+      "Survival is the only creed..."
+    ],
+    "flavor_texts": [
+      "The Geiger counter clicks softly...",
+      "Bottle caps jingle in your pocket..."
+    ]
+  }
+}
