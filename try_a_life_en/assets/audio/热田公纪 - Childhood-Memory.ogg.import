@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgndej18c4msx"
+path="res://.godot/imported/热田公纪 - Childhood-Memory.ogg-9d01daaa22b90b3c8ce17668d96f6868.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/热田公纪 - Childhood-Memory.ogg"
+dest_files=["res://.godot/imported/热田公纪 - Childhood-Memory.ogg-9d01daaa22b90b3c8ce17668d96f6868.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

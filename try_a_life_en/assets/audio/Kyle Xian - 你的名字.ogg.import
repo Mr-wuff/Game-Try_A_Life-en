@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://jlkkx01k1as5"
+path="res://.godot/imported/Kyle Xian - 你的名字.ogg-27216de766b358b9e2972f895c084fd3.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/Kyle Xian - 你的名字.ogg"
+dest_files=["res://.godot/imported/Kyle Xian - 你的名字.ogg-27216de766b358b9e2972f895c084fd3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

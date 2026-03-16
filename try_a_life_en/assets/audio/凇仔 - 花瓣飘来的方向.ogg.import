@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ceiurduj8hpd8"
+path="res://.godot/imported/凇仔 - 花瓣飘来的方向.ogg-dce4a1f4694084e93fc30dc3fd27a32b.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/凇仔 - 花瓣飘来的方向.ogg"
+dest_files=["res://.godot/imported/凇仔 - 花瓣飘来的方向.ogg-dce4a1f4694084e93fc30dc3fd27a32b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
