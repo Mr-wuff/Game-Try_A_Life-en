@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Try A Life-En"
+config/version="v1.0"
+run/main_scene="uid://bbbet6ftq0c0s"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="uid://be8p2birqkswj"
+
+[autoload]
+
+AudioManager="*res://autoloads/AudioManager.gd"
+EventBus="*res://autoloads/EventBus.gd"
+GameManager="*res://autoloads/GameManager.gd"
+NetworkManager="*res://autoloads/NetworkManager.gd"
+SaveManager="*res://autoloads/SaveManager.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
